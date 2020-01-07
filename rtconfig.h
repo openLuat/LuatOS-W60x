@@ -20,7 +20,7 @@
 #define RT_TIMER_THREAD_PRIO 4
 #define RT_TIMER_THREAD_STACK_SIZE 512
 #define RT_DEBUG
-#define RT_DEBUG_COLOR
+//#define RT_DEBUG_COLOR
 
 /* Inter-Thread communication */
 
@@ -48,7 +48,7 @@
 
 #define RT_USING_COMPONENTS_INIT
 #define RT_USING_USER_MAIN
-#define RT_MAIN_THREAD_STACK_SIZE 2048
+#define RT_MAIN_THREAD_STACK_SIZE 8096
 #define RT_MAIN_THREAD_PRIORITY 10
 
 /* C++ features */
@@ -237,7 +237,7 @@
 
 /* log format */
 
-#define ULOG_USING_COLOR
+//#define ULOG_USING_COLOR
 #define ULOG_OUTPUT_TIME
 #define ULOG_OUTPUT_LEVEL
 #define ULOG_OUTPUT_TAG
