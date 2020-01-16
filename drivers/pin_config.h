@@ -17,10 +17,19 @@
 #define WM_UART1_RX_PIN  31         // PB11 : UART1_RX  (W600)
 #define WM_UART1_TX_PIN  32         // PB12 : UART1_TX  (W600)
 
-// spi
-#define WM_SPI_CK_PIN 53            // PB27 : SPI_SCK
-#define WM_SPI_DI_PIN 55            // PB1  : SPI_MISO
-#define WM_SPI_DO_PIN 56            // PB2  : SPI_MOSI
+
+
+#ifdef SOC_W600_A8xx
+// W600 SPI
+    #define WM_SPI_CK_PIN 21            // PB16 : SPI_SCK
+    #define WM_SPI_DI_PIN 22            // PB17  : SPI_MISO
+    #define WM_SPI_DO_PIN 23            // PB18  : SPI_MOSI
+#else
+// W601 spi
+    #define WM_SPI_CK_PIN 53            // PB27 : SPI_SCK
+    #define WM_SPI_DI_PIN 55            // PB1  : SPI_MISO
+    #define WM_SPI_DO_PIN 56            // PB2  : SPI_MOSI
+#endif
 
 // i2c
 #define WM_I2C_SCL_PIN 18

@@ -10,8 +10,7 @@
 
 #include <rtthread.h>
 #include <rtdevice.h>
-#include "lua.h"
-#include "lauxlib.h"
+#include "luat_base.h"
 
 int main(void)
 {
@@ -21,5 +20,4 @@ int main(void)
     }
     return 0;
 }
-
 
