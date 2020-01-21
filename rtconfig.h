@@ -33,6 +33,7 @@
 
 #define RT_USING_MEMPOOL
 #define RT_USING_SMALL_MEM
+#define RT_USING_MEMTRACE
 #define RT_USING_HEAP
 
 /* Kernel Device Object */
@@ -47,7 +48,7 @@
 
 #define RT_USING_COMPONENTS_INIT
 #define RT_USING_USER_MAIN
-#define RT_MAIN_THREAD_STACK_SIZE 8192
+#define RT_MAIN_THREAD_STACK_SIZE 4096
 #define RT_MAIN_THREAD_PRIORITY 10
 
 /* C++ features */
@@ -182,9 +183,6 @@
 /* Network interface device */
 
 #define RT_USING_NETDEV
-#define NETDEV_USING_IFCONFIG
-#define NETDEV_USING_PING
-#define NETDEV_USING_NETSTAT
 #define NETDEV_USING_AUTO_DEFAULT
 #define NETDEV_IPV4 1
 #define NETDEV_IPV6 0
@@ -231,7 +229,6 @@
 #define LWIP_SO_SNDTIMEO 1
 #define LWIP_SO_RCVBUF 1
 #define LWIP_NETIF_LOOPBACK 0
-#define RT_LWIP_USING_PING
 
 /* AT commands */
 
@@ -250,7 +247,7 @@
 #define ULOG_OUTPUT_LVL 7
 #define ULOG_USING_ISR_LOG
 #define ULOG_ASSERT_ENABLE
-#define ULOG_LINE_BUF_SIZE 128
+#define ULOG_LINE_BUF_SIZE 256
 
 /* log format */
 

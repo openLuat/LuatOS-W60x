@@ -12,12 +12,20 @@
 #include <rtdevice.h>
 #include "luat_base.h"
 
+static void _main(void* param) {
+    luat_main(NULL, NULL, NULL);
+    while (1)
+        rt_thread_delay(10000000);
+}
+
 int main(void)
 {
-    luat_main(NULL, NULL, NULL);
-    while (1) {
-        rt_thread_mdelay(2000000);
-    }
+    rt_thread_t t = rt_thread_create("luat", _main, RT_NULL, 16*1024, 15, 20);
+    rt_thread_startup(t);
+    //luat_main(NULL, NULL, NULL);
+    //while (1) {
+    //    rt_thread_mdelay(2000000);
+    //}
     return 0;
 }
 
