@@ -102,20 +102,10 @@
 #define RT_SERIAL_USING_DMA
 #define RT_SERIAL_RB_BUFSZ 64
 #define RT_USING_HWTIMER
-#define RT_USING_I2C
-#define RT_USING_I2C_BITOPS
 #define RT_USING_PIN
 #define RT_USING_PWM
 #define RT_USING_RTC
-#define RT_USING_SOFT_RTC
-#define RTC_SYNC_USING_NTP
-#define RTC_NTP_FIRST_SYNC_DELAY 30
-#define RTC_NTP_SYNC_PERIOD 3600
 #define RT_USING_SPI
-#define RT_USING_SFUD
-#define RT_SFUD_USING_SFDP
-#define RT_SFUD_USING_FLASH_INFO_TABLE
-#define RT_SFUD_SPI_MAX_HZ 50000000
 #define RT_USING_WDT
 #define RT_USING_HWCRYPTO
 #define RT_HWCRYPTO_DEFAULT_NAME "hwcryto"
@@ -324,12 +314,12 @@
 #define BSP_USING_PWM
 #define BSP_USING_SPI
 #define WM_SPI_BUS_NAME "spi0"
+#define BSP_USING_RTC
 #define BSP_USING_CRYPTO
 #define BSP_USING_STANDBY
 
 /* External Libraries */
 
-#define WM_USING_ONESHOT
 #define SOC_W60X
 
 #endif
