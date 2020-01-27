@@ -308,6 +308,8 @@
 
 #define BSP_USING_UART
 #define BSP_USING_UART0
+#define BSP_USING_UART1
+#define WM_UART1_BAUDRATE 115200
 #define BSP_USING_PIN
 #define BSP_USING_WIFI
 #define BSP_USING_HWTIMER
@@ -321,5 +323,6 @@
 /* External Libraries */
 
 #define SOC_W60X
+#define RT_PRINTF_LONGLONG
 
 #endif

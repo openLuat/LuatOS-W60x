@@ -33,3 +33,7 @@ config SOC_W60X
     select RT_USING_COMPONENTS_INIT
     select RT_USING_USER_MAIN
     default y
+
+config RT_PRINTF_LONGLONG
+    bool
+    default y
