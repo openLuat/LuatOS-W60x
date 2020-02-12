@@ -13,6 +13,7 @@
 #include "luat_base.h"
 
 static void _main(void* param) {
+    rt_thread_mdelay(100); // 故意延后100ms
     luat_main(NULL, NULL, NULL);
     while (1)
         rt_thread_delay(10000000);
