@@ -32,7 +32,6 @@
 /* Memory Management */
 
 #define RT_USING_SMALL_MEM
-#define RT_USING_MEMTRACE
 #define RT_USING_HEAP
 
 /* Kernel Device Object */
@@ -184,13 +183,13 @@
 #define RT_LWIP_TCP
 #define RT_LWIP_RAW
 #define RT_MEMP_NUM_NETCONN 8
-#define RT_LWIP_PBUF_NUM 16
+#define RT_LWIP_PBUF_NUM 8
 #define RT_LWIP_RAW_PCB_NUM 4
 #define RT_LWIP_UDP_PCB_NUM 4
 #define RT_LWIP_TCP_PCB_NUM 4
 #define RT_LWIP_TCP_SEG_NUM 40
-#define RT_LWIP_TCP_SND_BUF 10240
-#define RT_LWIP_TCP_WND 10240
+#define RT_LWIP_TCP_SND_BUF 8196
+#define RT_LWIP_TCP_WND 8196
 #define RT_LWIP_TCPTHREAD_PRIORITY 10
 #define RT_LWIP_TCPTHREAD_MBOX_SIZE 8
 #define RT_LWIP_TCPTHREAD_STACKSIZE 2048
@@ -218,6 +217,7 @@
 /* Utilities */
 
 #define RT_USING_RYM
+#define YMODEM_USING_CRC_TABLE
 #define YMODEM_USING_FILE_TRANSFER
 #define RT_USING_ULOG
 #define ULOG_OUTPUT_LVL_D
