@@ -9,6 +9,7 @@
  */
 #ifndef __PIN_CONFIG_H__
 #define __PIN_CONFIG_H__
+#include "rtconfig.h"
 
 // UART
 #define WM_UART2_RX_PIN  1          // PB19 : UART2_RX  (W601)
@@ -32,14 +33,26 @@
 #endif
 
 // i2c
-#define WM_I2C_SCL_PIN 18
-#define WM_I2C_DAT_PIN 19
+#ifdef SOC_W600_A8xx
+    #define WM_I2C_SCL_PIN 31
+    #define WM_I2C_DAT_PIN 32
+#else
+    #define WM_I2C_SCL_PIN 18
+    #define WM_I2C_DAT_PIN 19
+#endif
 
 // soft i2c
-#define SOFT_I2C1_SCL_PIN 23         // PA0 : I2C1_SCL
-#define SOFT_I2C1_SDA_PIN 24         // PA1 : I2C1_SDA
-#define SOFT_I2C2_SCL_PIN 25         // PA2 : I2C2_SCL
-#define SOFT_I2C2_SDA_PIN 24         // PA1 : I2C2_SDA
+#ifdef SOC_W600_A8xx
+    #define SOFT_I2C1_SCL_PIN 31         // PB6 : I2C1_SCL
+    #define SOFT_I2C1_SDA_PIN 32         // PA1 : I2C1_SDA
+    #define SOFT_I2C2_SCL_PIN 25         // PA2 : I2C2_SCL
+    #define SOFT_I2C2_SDA_PIN 24         // PA1 : I2C2_SDA
+#else
+    #define SOFT_I2C1_SCL_PIN 23         // PA0 : I2C1_SCL
+    #define SOFT_I2C1_SDA_PIN 24         // PA1 : I2C1_SDA
+    #define SOFT_I2C2_SCL_PIN 25         // PA2 : I2C2_SCL
+    #define SOFT_I2C2_SDA_PIN 24         // PA1 : I2C2_SDA
+#endif
 
 #endif /* __PIN_CONFIG_H__ */
 

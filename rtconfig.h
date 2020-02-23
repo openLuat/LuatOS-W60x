@@ -89,6 +89,8 @@
 #define RT_SERIAL_USING_DMA
 #define RT_SERIAL_RB_BUFSZ 64
 #define RT_USING_HWTIMER
+#define RT_USING_I2C
+#define RT_USING_I2C_BITOPS
 #define RT_USING_PIN
 #define RT_USING_PWM
 #define RT_USING_RTC
@@ -273,8 +275,24 @@
 
 /* peripheral libraries and drivers */
 
+#define PKG_USING_U8G2
+#define U8G2_USE_HW_I2C
+#define U8G2_I2C_DEVICE_NAME "i2c1soft"
+
+/* U8G2 Examples */
+
+#define U8G2_USING_HW_I2C_SSD1306
+#define PKG_USING_U8G2_C_LATEST_VERSION
+
+/* C   version: v1.x.x */
+
+/* C++ version: v2.x.x */
+
+#define PKG_U8G2_VER_NUM 0x19999
 #define PKG_USING_WM_LIBRARIES
 #define PKG_USING_WM_LIBRARIES_LATEST_VERSION
+#define PKG_USING_I2C_TOOLS
+#define PKG_USING_I2C_TOOLS_LATEST_VERSION
 
 /* miscellaneous packages */
 
@@ -302,6 +320,8 @@
 #define BSP_USING_WIFI
 #define BSP_USING_HWTIMER
 #define BSP_USING_PWM
+#define BSP_USING_SOFT_I2C
+#define BSP_USING_SOFT_I2C1
 #define BSP_USING_SPI
 #define WM_SPI_BUS_NAME "spi0"
 #define BSP_USING_WDT
