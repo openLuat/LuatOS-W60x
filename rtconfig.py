@@ -63,7 +63,7 @@ if PLATFORM == 'gcc':
         CFLAGS += ' -O0 -gdwarf-2 -g -Wall'
         AFLAGS += ' -gdwarf-2'
     else:
-        CFLAGS += ' -O2'
+        CFLAGS += ' -O2 -Wall'
 
     POST_ACTION = OBJCPY + ' -O binary $TARGET rtthread.bin\n' + SIZE + ' $TARGET \n'
     POST_ACTION += 'python ./makeimg.py'
