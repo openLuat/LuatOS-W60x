@@ -61,7 +61,7 @@
 #define FINSH_USING_SYMTAB
 #define FINSH_USING_DESCRIPTION
 #define FINSH_THREAD_PRIORITY 20
-#define FINSH_THREAD_STACK_SIZE 4096
+#define FINSH_THREAD_STACK_SIZE 8192
 #define FINSH_CMD_SIZE 80
 #define FINSH_USING_MSH
 #define FINSH_USING_MSH_DEFAULT
@@ -322,6 +322,16 @@
 #define BSP_USING_WIFI
 #define BSP_USING_HWTIMER
 #define BSP_USING_PWM
+#define USING_PWM_CH1
+#define WM_PWM_CH1_PIN -1
+#define USING_PWM_CH2
+#define WM_PWM_CH2_PIN -1
+#define USING_PWM_CH3
+#define WM_PWM_CH3_PIN -1
+#define USING_PWM_CH4
+#define WM_PWM_CH4_PIN -1
+#define USING_PWM_CH5
+#define WM_PWM_CH5_PIN -1
 #define BSP_USING_SOFT_I2C
 #define BSP_USING_SOFT_I2C1
 #define BSP_USING_SPI
@@ -333,6 +343,7 @@
 
 /* External Libraries */
 
+#define WM_USING_ONESHOT
 #define SOC_W60X
 #define RT_PRINTF_LONGLONG
 
